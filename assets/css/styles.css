@@ -1,0 +1,312 @@
+body {
+  font: 100% "Roboto", sans-serif;
+  color: #757575 !important;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #C0273C;
+  height: 70px;
+}
+header h1 {
+  color: #FFF !important;
+}
+header li a {
+  color: #FFF !important;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #f6d5d9;
+  height: auto !important;
+}
+footer a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f05454 !important;
+}
+
+.dark-text {
+  color: #757575 !important;
+}
+
+.logo {
+  margin-right: 7.5vw;
+}
+.logo h1:hover {
+  color: #f05454 !important;
+}
+
+.logo-2 h2:hover {
+  color: #f05454 !important;
+}
+
+.padding-nav-a {
+  padding-right: 3.5vw !important;
+}
+
+.adjustment {
+  text-align: right;
+}
+
+.img-scale-1 {
+  height: 550px;
+  margin-right: 1.1vw;
+}
+
+.img-scale-2 {
+  height: 325px;
+  padding-right: 4.5vw;
+}
+
+.img-scale-3 {
+  height: 350px;
+}
+
+.img-scale-4 {
+  height: 400px;
+}
+
+.img-scale-5 {
+  height: 300px;
+}
+
+.icon:hover,
+.img-scale-1:hover,
+.img-scale-2:hover,
+.img-scale-3:hover,
+.img-scale-4:hover,
+.img-scale-5:hover {
+  opacity: 0.9;
+  transform: translate(-3%, -3%);
+}
+
+.img-scale-6 {
+  height: 40px;
+}
+.img-scale-6:hover {
+  opacity: 0.5;
+  transform: translate(-3%, -3%);
+}
+
+.icon {
+  height: 77px;
+}
+
+.sizing-footer {
+  height: 90px !important;
+}
+
+.margin-correction {
+  margin-left: auto !important;
+}
+
+.position-relative-test {
+  height: 300px;
+  width: 100%;
+}
+
+.btn {
+  background: #C0273C;
+  background-image: -webkit-linear-gradient(top, #C0273C, #C0273C);
+  background-image: -moz-linear-gradient(top, #C0273C, #C0273C);
+  background-image: -ms-linear-gradient(top, #C0273C, #C0273C);
+  background-image: -o-linear-gradient(top, #C0273C, #C0273C);
+  background-image: linear-gradient(to bottom, #C0273C, #C0273C);
+  border-color: #C0273C;
+  color: #FFF;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  filter: drop-shadow(-1mm 1mm 4mm #757575);
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 100%;
+}
+.btn:hover {
+  background: #f05454;
+  border-color: #f05454;
+  transform: translate(0%, 3%);
+  text-decoration: none;
+}
+
+#email,
+#name {
+  border: none;
+  border-bottom: 2px solid #757575;
+  font-size: 12pt;
+  height: 25px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+#message {
+  border: none;
+  border-bottom: 2px solid #757575;
+  color: #000;
+  font-size: 12pt;
+  height: 90px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.footer-link {
+  color: #C0273C !important;
+}
+
+div[class*=reduced-container-3], div[class*=reduced-container-2] {
+  margin-top: 90px;
+}
+
+div[class*=reduced-container-1] {
+  max-width: 1000px;
+}
+
+div[class*=reduced-container-2] {
+  max-width: 900px;
+}
+
+div[class*=reduced-container-3] {
+  max-width: 1000px;
+}
+
+div > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem !important;
+}
+
+div > a > h2,
+div > h2 {
+  color: #C0273C !important;
+}
+
+div > h3 {
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  width: 200px;
+}
+
+div > p[class=text-center] {
+  width: 200px;
+}
+
+div > p[class=text-left] {
+  width: 300px;
+}
+
+.adjustment > .container {
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  header li a {
+    color: #000 !important;
+  }
+}
+.top-25 {
+  top: 25% !important;
+}
+
+.top-30 {
+  top: 30% !important;
+}
+
+.top-35 {
+  top: 35% !important;
+}
+
+.top-40 {
+  top: 40% !important;
+}
+
+.top-45 {
+  top: 45% !important;
+}
+
+.top-55 {
+  top: 55% !important;
+}
+
+.top-60 {
+  top: 60% !important;
+}
+
+.top-65 {
+  top: 65% !important;
+}
+
+.top-70 {
+  top: 70% !important;
+}
+
+.top-75 {
+  top: 75% !important;
+}
+
+.top-80 {
+  top: 80% !important;
+}
+
+.top-85 {
+  top: 85% !important;
+}
+
+.top-90 {
+  top: 90% !important;
+}
+
+.start-5 {
+  left: 5% !important;
+}
+
+.start-10 {
+  left: 10% !important;
+}
+
+.start-15 {
+  left: 15% !important;
+}
+
+.start-20 {
+  left: 20% !important;
+}
+
+.start-25 {
+  left: 25% !important;
+}
+
+.start-30 {
+  left: 30% !important;
+}
+
+.start-35 {
+  left: 35% !important;
+}
+
+.start-40 {
+  left: 40% !important;
+}
+
+.start-45 {
+  left: 45% !important;
+}
+
+.start-55 {
+  left: 55% !important;
+}
+
+.start-60 {
+  left: 60% !important;
+}
+
+.start-65 {
+  left: 65% !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

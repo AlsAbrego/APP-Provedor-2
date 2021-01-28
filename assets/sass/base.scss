@@ -1,0 +1,366 @@
+// Definição das corres e fonts padrões do projeto
+$font-stack: 'Roboto', sans-serif;
+$red: #C0273C;
+$white: #FFF;
+$gray: #757575;
+$black: #000;
+$lightred: #f05454;
+$lightedred: #f6d5d9;
+
+// Definições das propriedades das TAG
+body {
+  font: 100% $font-stack;
+  color: $gray !important;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: $red;
+  height: 70px;
+
+  h1 {
+    color: $white !important;
+  }
+
+  li {
+    a {
+      color: $white !important;
+      text-decoration: none;
+    }
+  }
+}
+
+footer {
+  background-color: $lightedred;
+  height: auto !important;
+  a {
+    text-decoration: none;
+  }
+}
+
+a:hover {
+  color: $lightred !important;
+}
+
+.dark-text {
+  color: $gray !important;
+}
+
+.logo {
+  margin-right: 7.5vw;
+  & h1:hover {
+    color: $lightred !important;
+  }
+}
+
+.logo-2 {
+  & h2:hover {
+    color: $lightred !important;
+  }
+}
+
+.padding-nav-a {
+  padding-right: 3.5vw !important;
+}
+
+// Classe extra usada, porque o aligment do bootstrap não estava funcionando!
+.adjustment {
+  text-align: right;
+}
+
+// Scale das images
+.img-scale-1 {
+  height: 550px;
+  margin-right: 1.1vw;
+}
+
+.img-scale-2 {
+  height: 325px;
+  padding-right: 4.5vw;
+}
+
+.img-scale-3 {
+  height: 350px;
+}
+
+.img-scale-4 {
+  height: 400px;
+}
+
+.img-scale-5 {
+  height: 300px;
+}
+
+// Efects
+.icon:hover,
+.img-scale-1:hover,
+.img-scale-2:hover,
+.img-scale-3:hover,
+.img-scale-4:hover,
+.img-scale-5:hover {
+  opacity: 0.9;
+  transform: translate(-3%, -3%);
+}
+
+.img-scale-6 {
+  height: 40px;
+
+  &:hover {
+    opacity: 0.5;
+    transform: translate(-3%, -3%);
+  }
+}
+
+.icon {
+  height: 77px;
+}
+
+.sizing-footer {
+  height: 90px!important;
+}
+
+.margin-correction {
+  margin-left: auto !important;
+}
+
+.position-relative-test {
+  height: 300px;
+  width: 100%;
+}
+
+// Função pardão de cores para botões
+@mixin color-button($color1, $color2) {
+  background: $color1;
+  background-image: -webkit-linear-gradient(top, $color1, $color1);
+  background-image: -moz-linear-gradient(top, $color1, $color1);
+  background-image: -ms-linear-gradient(top, $color1, $color1);
+  background-image: -o-linear-gradient(top, $color1, $color1);
+  background-image: linear-gradient(to bottom, $color1, $color1);
+  border-color: $color1;
+  color: $color2;
+}
+@mixin btn-border-radius($p) {
+  -webkit-border-radius: $p;
+  -moz-border-radius: $p;
+  border-radius: $p;
+}
+// Definição do botão de enviar e seu efeito
+.btn {
+  @include color-button($red,$white);
+  @include btn-border-radius(15px);
+  filter: drop-shadow(-1mm 1mm 4mm $gray);
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    background: $lightred;
+    border-color: $lightred;
+    transform: translate(0%, 3%);
+    text-decoration: none;
+  }
+}
+
+
+
+.footer-link {
+  color: $red!important;
+}
+
+//  Uso das ID como parametros de modificação
+#email,
+#name {
+  border: none;
+  border-bottom: 2px solid $gray;
+  font-size: 12pt;
+  height: 25px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+#message {
+  border: none;
+  border-bottom: 2px solid $gray;
+  color: $black;
+  font-size: 12pt;
+  height: 90px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+// Extend/Inheritance do SASS
+%reduce-container {
+  margin-top: 90px;
+}
+
+div[class*='reduced-container-1'] {
+  max-width: 1000px;
+}
+
+div[class*='reduced-container-2'] {
+  @extend %reduce-container;
+  max-width: 900px;
+}
+
+div[class*='reduced-container-3'] {
+  @extend %reduce-container;
+  max-width: 1000px;
+}
+
+// Uso especiais de tags
+div > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem!important;
+}
+
+div > a > h2,
+div > h2 {
+  color: $red!important;
+}
+
+div > h3 {
+  color: $black;
+  font-weight: bold;
+  font-size: 12px;
+  width: 200px;
+}
+
+div > p[class="text-center"] {
+  width: 200px;
+}
+
+div > p[class="text-left"] {
+  width: 300px;
+}
+
+.adjustment > .container {
+  margin-right: 50px;
+}
+
+// controle das corres do menu mobile
+$breakpoint-tablet: 991px;
+@media screen and (max-width: $breakpoint-tablet) {
+  header {
+    li {
+      a {
+        color: $black !important;
+      }
+    }
+  }
+}
+
+
+// Extensão das propriedades padão das class top e start padrão do bootstrap para valores mais refinados usando a configuração de posicionamento
+//relative > absolute coloquei bastante valores, para ter maior variedade de posicionamento dos images APP
+
+@mixin changePorcentage($porcentage, $condition) {
+  @if $condition == 0 { //0 - TOP, 1 - Start
+    top: $porcentage*1% !important;
+  } @else{
+    left: $porcentage*1%!important;
+  }
+}
+
+.top-25 {
+  @include changePorcentage(25,0);//0-top
+}
+
+.top-30 {
+  @include changePorcentage(30,0);
+}
+
+.top-35 {
+  @include changePorcentage(35,0);
+}
+
+.top-40 {
+  @include changePorcentage(40,0);
+}
+
+.top-45 {
+  @include changePorcentage(45,0);
+}
+
+.top-55 {
+  @include changePorcentage(55,0);
+}
+
+.top-60 {
+  @include changePorcentage(60,0);
+}
+
+.top-65 {
+  @include changePorcentage(65,0);
+}
+
+.top-70 {
+  @include changePorcentage(70,0);
+}
+
+.top-75 {
+  @include changePorcentage(75,0);
+}
+
+.top-80 {
+  @include changePorcentage(80,0);
+}
+
+.top-85 {
+  @include changePorcentage(85,0);
+}
+
+.top-90 {
+  @include changePorcentage(90,0);
+}
+
+.start-5 {
+  @include changePorcentage(5,1);//1-start
+}
+
+.start-10 {
+  @include changePorcentage(10,1);
+}
+
+.start-15 {
+  @include changePorcentage(15,1);
+}
+
+.start-20 {
+  @include changePorcentage(20,1);
+}
+
+.start-25 {
+  @include changePorcentage(25,1);
+}
+
+.start-30 {
+  @include changePorcentage(30,1);
+}
+
+.start-35 {
+  @include changePorcentage(35,1);
+}
+
+.start-40 {
+  @include changePorcentage(40,1);
+}
+
+.start-45 {
+  @include changePorcentage(45,1);
+}
+
+.start-55 {
+  @include changePorcentage(55,1);
+}
+
+.start-60 {
+  @include changePorcentage(60,1);
+}
+
+.start-65 {
+  @include changePorcentage(65,1);
+}
+// @import "reset"; /* usado apenas na construção*/
